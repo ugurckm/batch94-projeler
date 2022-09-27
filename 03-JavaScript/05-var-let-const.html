@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR_LET_CONST</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var x = 5;
+        var x = 6;//var ustune yazıyor 2 tane var da x tanımlarsak 2. yi alır üstüne yazar son yazılanı kabul eder.
+        console.log(x);//6 yazdırdı
+
+        var x=4;
+        x=8;//tekrar var yazmaya gerek yok x i bu şelkilde de değiştirebiliriz.
+        console.log(x);//8 yazdırdı
+//let de tekrar durumunda hata alınır.ancak ley yazmayıp y tekrar tanımlarsakk y=7 gibi günceller
+
+        let y =5;
+        //let y = 6; yazarsak hata verir let te 2 tane y variable tanımlayamazsın aynı ad da
+        y =7;//y yi degistirmek icin y = ; yazarsa y yi bu sekilde degistirebilirsin
+        console.log(y);//7 yazdırdı
+
+        var x = 5;
+        var k;//bu sekiilde undefined olur var da ilk deger atamadan yazabilirsin . let de de yazabilirsin const ta yazamazsın const ta ilk deger atamak zorundasın (sabit)
+        const d=2; //const lara ilk deger atanmak zorundadir
+        let z;
+        console.log(x,k,d,z);//aralarına virgul koyarak yazdirabilirisiniz.
+   
+        let enBuyukTamsayi = Number.MAX_SAFE_INTEGER;//guvenli islem yapilacak en buyuk sayiyi verir.
+        console.log(enBuyukTamsayi);
+
+        console.log(enBuyukTamsayi+5==enBuyukTamsayi+6);//enBuyukTamsayi dan daha fazla işlem yapasanız yanlıs deger alırsınız cıktı false olmasi lazim
+        //üsteki false olması lazım güvenli sayi aralıgı dısında;
+
+        var testTamsayi = 134651654144165316856526n;//sayi sonuna n yazinca  BigInt  big integer  sona n koy
+        console.log(testTamsayi+5n==testTamsayi+6n);//false   5-6 nın sonuna n koymazsan eror verir bigInt yaptık sonuna n koyarak
+
+        let s=12;
+        console.log(s);//12
+        console.log(typeof(s));//Number
+        //typeof() icine yazılan variable in data type ini verir. number verdi
+
+        let l="Ali";
+        console.log(l);//Ali
+        console.log(typeof(l));//String
+
+        let t=true;
+        console.log(t);//true
+        console.log(typeof(t));//Boolean
+
+
+        
+    </script>
+</body>
+</html>
+<!-- 
+    Javascript te değişken veya sabit tanımlamak için 3 farklı ifade kullanılır
+var =global her yerden ulasılabiliyor
+let =tanımlandıgı yerde gecerli
+const =tanımlandıgı yerde gecerli. sabit tanımlanıyor değer atanmak zorunda. const ta atanan daha sonra değisirilemiyor.
+ -->
+
+ <!-- variablları yazarken
+ders
+gen_Ort
+$mass
+dgun
+    seklinde yazabilirsin
+-->

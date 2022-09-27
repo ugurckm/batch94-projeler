@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const s1 = 2022;
+        const s2 = 1980;
+
+        console.log("Sonuc :"+ s1 - s2);//NaN
+        console.log("Sonuc :"+ (s1 - s2));//42
+        console.log(`Sonuc: ${s1-s2}`);//42
+
+        const pi =3;
+        const r=3;
+        const alan = pi*r**2;
+        const cevre = 2*pi*r;
+
+
+        console.log(cevre,alan);//18 27
+        console.log("cevre:"+ cevre , "Alan:" +alan);//cevre:18 Alan:27
+
+        /*
+        let a = 3;
+        let b= ++a;
+        let c = --a;
+        console.log(a, b, c);//3 4 3
+
+        a += 5;
+        console.log(a);//8  */
+
+        let a = 3, b = ++a, c = --a;
+        console.log(a,b,c);//3 4 3
+        a += 6;
+        console.log(a);//9  
+
+        let d = 2, e = d++, f = --d;
+        console.log(d ,e ,f);//2 2 2
+        document.write(d,e,f);
+
+        const elma = 123;
+        document.write("Birler basamagi:" + elma%10);//3 direkt tarayiciya yazdirir.
+
+
+
+    </script>
+</body>
+</html>

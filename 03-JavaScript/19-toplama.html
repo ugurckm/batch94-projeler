@@ -1,0 +1,41 @@
+<!--
+    java klasörü icindeki resmi yapiyoruz 
+1) 2 tane input number, 1 tane buton
+2) div kullanalim.
+3) topla fonksiyonunu olustur
+4) topla fonksiyonunu butona bagla
+5) topla fonksiyonu icinde
+    a) Sayi1 degerini al
+    b) sayi2 degerini al
+    c) sayilari topla
+    d) sonuc icinde goster.  
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="sayi1" placeholder="sayi 1">
+    <input type="number" id="sayi2" placeholder="sayi 2">
+    <button onclick="topla()">Topla</button><!-- butona tiklaninca topla fonksiyonu calisir -->
+
+    <div id="sonuc"></div>
+
+    <script>
+        function topla(){
+            let sayi1 = document.querySelector("#sayi1").value;// ilk inpuutun value'sunu aldik
+            let sayi2 = document.querySelector("#sayi2").value;
+
+            let sonuc = Number(sayi1)  + Number(sayi2);//string geldigiicin number'a cevirdik
+
+            document.querySelector("#sonuc").innerHTML = `Sonuc: <b> ${sonuc}</b>`;
+
+        }
+    </script>
+</body>
+</html>

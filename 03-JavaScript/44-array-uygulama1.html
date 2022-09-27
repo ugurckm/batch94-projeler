@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Topla" onclick="topla()">
+    <div id="toplam"></div>
+
+    <script>
+/*utona basildiginda eleman sayilari esit iki dizi icindeki karsilikli elemanlari toplaip, yeni bir diziye aktarn programi yaiziniz
+*/
+
+//----------------Event FoNksiyoN--------------------
+        function topla(){
+            const dizi1 = [12,56,14,67,89,33,22];
+            const dizi2 = [54,16,41,78,18,35,28];
+            const yeniDizi = sumArrays(dizi1, dizi2);//***
+            console.log(yeniDizi);//[66, 72, 55, 145, 107, 68, 50]
+            document.querySelector("#toplam").innerHTML = `Yeni Dizi Toplamı:  yeniDizi=[${yeniDizi}]`;
+        }
+       
+//----------------jeNerik Fonksiyon--------------------
+        function sumArrays(arr1, arr2){//***const yeniDizi = sumArrays(dizi1, dizi2); dısardan gelen elemanları almak icin arr1 arr2 yazdık
+            let arr3 = [];
+
+            for(let i=0; i<arr1.length; i++){
+                let toplam = arr1[i] + arr2[i];
+                arr3.push(toplam);
+            }
+            return arr3;
+        }
+//------------------------------------------------------
+    </script>
+</body>
+</html>

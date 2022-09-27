@@ -1,0 +1,36 @@
+<!-- burdan sonrasını izledim 28.8.2022 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 1</title>
+</head>
+<body>
+    
+
+    <script>
+        let kurslar = ["JavaScript", "Salesforce", "Data Science", "Python"];
+
+        console.log(kurslar);//4 elemanlı bir array olarak gosterir. ['JavaScript', 'Salesforce', 'Data Science', 'Python']
+        console.log(kurslar[1]);//Saleceforce 'u verir
+        console.log(kurslar[kurslar.length-1]);//son elemanı verir  'Python'
+        console.log(kurslar[kurslar.length-1]);
+        console.log(kurslar.length); //4 verir uzunlugu verir.
+//-------------------------------------      
+        const kurslar2 = ["JavaScript", "Salesforce", "Data Science", "Python"]; // !!!let le degistirdik derste const-let 
+
+        kurslar2[0] = "React"; //0 javascript le degisecek
+        kurslar2[1] = "Java"; //1 salesforce ile degisecek
+
+        console.log(kurslar2);//['React', 'Java', 'Data Science', 'Python'] const ile tanimlanmasina ragmen degistirebildik 
+                              //cunku arraylar non-primitive oldugu icin degistirilebilir.
+        
+        kurslar2 = ["Ali", "Veli"];                      
+        console.log(kurslar2);// Const'la tanimlanmissa array'i komple degistiremezsiniz.
+                                // !!!ama let'e cevirirseniz degistirebilirsiniz.
+                                
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR_LET_CONST_2</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var x = 12;
+        var x = "Ali";
+        console.log(x);//ali yazar 
+        //*** Var oncesinde sayi tanımladın sonrasında string tanımladın hata vermez en sonuncuyu kabul eder.
+
+        let y= 15;
+      //let y =16; tekrar aynı let tanımlanamaz y= ile güncelleme yapilabilir
+        y = 17;//y yi guncellemek icin basına let yazmadan bu sekilde guncellenir.
+        console.log(y);
+
+        const sabit = "Ali";
+        console.log(sabit);
+        console.log(typeof(sabit));
+        //const la var  a ayni variable ismiyle tanimlama yapamazsin dikkat et!
+
+        /*
+        var sabit = 50;
+        console.log(sabit);
+        console.log(typeof(sabit));
+        */ //const veya let ile değişken tanımlandığında, aynı scope içinde aynı isimde başka bir değişken tanımlanmasına izin vermez. !
+   
+
+
+    </script>
+</body>
+</html>

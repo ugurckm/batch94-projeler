@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .darkMode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <input type="button" value="Dark Mode" id="btnMod" onclick="modDegis()" />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quas tenetur
+      error? Vero sequi molestias amet nihil quas. In nostrum, fugiat distinctio
+      quia minima itaque aperiam atque eveniet laboriosam enim. Nihil suscipit,
+      culpa ullam veniam necessitatibus est. Facere nobis iusto beatae ratione
+      quidem totam facilis sunt neque tempora, numquam quos ipsa, blanditiis
+      incidunt debitis eligendi quisquam impedit ipsum? Fugit, illo? A similique
+      corporis, ullam alias itaque nesciunt quaerat! Accusamus, ipsam vel, sed
+      molestiae in commodi, iste ad ratione ab velit culpa labore. Quibusdam,
+      architecto neque. Facilis quam doloremque veritatis dolore. Hic error
+      adipisci labore? Blanditiis facilis quasi quas molestias. Voluptate
+      repellendus ipsum placeat eveniet optio dignissimos quibusdam? Maxime
+      reprehenderit quaerat ducimus quis ipsum magnam optio dolorum? Doloribus
+      repellendus vel sint?
+    </p>
+
+
+    <script>
+        let mod = "light"; //default olani mod degiskenine attim
+
+        function modDegis(){
+
+            if(mod == "light"){
+                document.querySelector("body").classList.add("darkMode");
+                document.querySelector("#btnMod").value = "Light Mode";
+                mod = "dark";
+
+            }else{
+                document.querySelector("body").classList.remove("darkMode");
+                document.querySelector("#btnMod").value = "Dark Mode";
+                mod = "light";
+
+            }
+        }
+    </script>
+  </body>
+</html>

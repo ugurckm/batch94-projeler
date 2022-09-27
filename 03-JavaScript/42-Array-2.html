@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Dizi İcindeki En Buyuk Sayiyi bulunuz</title>
+</head>
+<body>
+    <div id="sayi"></div>
+    
+    <script>
+        /* Bir dizi icindeki en buyuk sayıyı bulunuz... */
+        //alert("Bir dizi icindeki en buyuk sayıyı bulunuz...");//ben ekledim
+       // alert(" let sayilar = [12, 56, 14, 67, 89, 33, 22];");//ben ekledim
+
+        let sayilar = [12, 56, 14, 67, 89, 33, 22];
+        let enBuyuk = sayilar[0];//ilk sayiyi en buyuk sayi kabul ettik asagıda kontrol edicez diger sayi buyukse degistirecez
+    
+        for(let i=0; i<sayilar.length ; i++){//i=1 de yazabilirdik. ilk karsilasmai atlardi(12==12)
+            if(sayilar[i] > enBuyuk){
+                //console.log(sayilar[i] ,enBuyuk);
+                enBuyuk = sayilar[i];
+
+            }
+
+        }
+        console.log(enBuyuk);
+        document.querySelector("#sayi").innerHTML = enBuyuk;
+    </script>
+</body>
+</html>

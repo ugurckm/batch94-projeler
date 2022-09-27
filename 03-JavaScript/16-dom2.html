@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><!-- css title dan sonra yazilir -->
+    <style>
+        .pink{ /* 3 Asagida boyle bir class yok. JS ile (add) ekleyecegiz*/
+            background-color: rgb(234, 174, 185);
+        }
+        .yellow{
+            background-color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 id="baslik" class="name blue red">Merhaba</h1><!-- 1 -->
+
+    <script>
+
+        let stiller = document.querySelector("#baslik").classList;//2- h1 class listelerini toplu olarak gorduk. classlist name blu red i verir
+        console.log(stiller);
+        stiller.add("pink");//4- stillerin class listine pink'i ekledik
+
+        document.querySelector("#baslik").classList.add("yellow");
+        document.querySelector("#baslik").classList.remove("yellow");
+    </script>
+</body>
+</html>

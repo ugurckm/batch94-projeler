@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 5- butonlara stil verelim  */
+        .btn{
+            background-color: aquamarine;
+            border: 0; /* 6- cerceveleri olmasin  */
+            padding: 0.5rem 1rem; /* 7- 0.5rem ustten alttan, 1 rem de sagdan ve soldan  */
+            border-radius: 0.3rem; /* 8- kenarlari oval olsun   */
+        }
+        .isim{
+            padding: 0.3rem 1rem; /* 11- text box eklebutonuyla ayni buyuklukte oldu */
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+        }
+        .liste{ /* 12- list box kismi   */
+            width: 230px;
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1- birinci text box ile ekle butonunu gruplandirmak icin div arasina yazalim -->
+    <div>
+        <input type="text" id="txtAd" placeholder="Adinizi Giriniz" class="isim"> <!-- 9-class ismi isim olsun -->
+        <input type="button" value="Ekle" id="btnEkle" class="btn" onclick="ekle()">
+        <!-- 21- onclick ile ekle fonksiyonu olusturup butona baglayalim -->
+    </div>
+
+    <!-- 2- lixt box icin yeni bir div olusturalim -->
+    <div style="margin-top:1rem ;"> <!-- 13- div'lerin arasini actik -->
+
+        <select size="10" id="lstAdlar" class="liste"> <!-- 3-on adet isim gostersin -->
+            <!-- 10- class ismi liste olsun -->
+
+        </select>
+    </div>
+<!-- 4- div arasinda iki tane input olusturalim -->
+    <div style="margin-top:1rem ;"> <!-- 14- div'lerin arasini actik. -->
+
+    <input type="button" value="Sil" id="btnSil" class="btn" onclick="sil()"> <!-- 26-sil fonk.olusturalim -->
+    <input type="button" value="Sirala" id="btnSirala" class="btn" onclick="sirala()">
+    <!-- 32- siralaya onclick verdik -->
+
+    </div>
+   
+<script>
+
+let arrNames = ["Ali", "Veli", "Ayse"]; //15- Default olarak birkac isim ekledim
+
+//16- ilk olarak select'in icine option'lari yerlestirelim.Bunun icin bir doldurma fonksiyonu olusturalim
+
+//-----------------------------------diziyi guncelleyen fonksiyon.refresh yapar.
+function fillList(){
+    let strOption = ""; // 17- dizinin elemanlarini yerlestirecegimiz bir alan actik.
+
+    for(let i=0; i<arrNames.length; i++){ //18- dizinin icinde gezinecegiz ve her donusunde bir 
+        //optionu select icinde olusturacagiz
+        strOption += `<option>${arrNames[i]}</option>`;
+        
+    }
+    document.querySelector("#lstAdlar").innerHTML = strOption; //19-dongu bittikten sonra listeye yerlestirdik
+}
+fillList(); //20- calismasi icin cagirdim
+//---------------------------------------22- ekle() fonksiyonu
+
+function ekle(){
+//23- once textboxtan degeri alalim
+const ad = document.querySelector("#txtAd").value;
+arrNames.push(ad); //24- diziye ekledim
+fillList(); //25- eklenen yeni isimle diziyi guncelledim
+}
+
+//-------------------------------------27- sil fonksiyonu
+function sil(){
+
+    const index = document.querySelector("#lstAdlar").selectedIndex; //28-tum listeyi sectim sonrada
+    //tiklanan elemanin indexini aldim
+    //alert(index); 29- secip sil'e basinca index numarasini gosterir.
+    arrNames.splice(index,1); //30-index numarasini siler
+    fillList(); //31- silinince listeyi yeniler
+}
+//-------------------------------------33- sirala fonksiyonu
+
+function sirala(){
+    arrNames.sort(); //34- diziyi alfabetik siralar.
+    fillList();
+}
+
+</script>
+</body>
+</html>

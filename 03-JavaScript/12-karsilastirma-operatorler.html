@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let x =50;
+        let y =40;
+        let z =10;
+
+        console.log(x == 50);//True
+        console.log(x == 40);//False
+        console.log(x === 50);//True
+        console.log(x == "50");//True, == "" icindeki veriye bakar.
+        console.log(x === "50");//false, === "" icindeki data tipine de bakar x number "50" string oldugu icin false
+        console.log(x == 50n);//True, == "" icindeki veriye bakar
+        console.log(x === 50n);//false, === 50n oldugu icin
+
+        console.log();
+        console.log(x > y);//True
+        console.log(x > "30");//True, Buyuk kucuk data tipine bakmaz
+        console.log(x >"130");//false
+        console.log(x > "asd");//false verir hata vermez.
+
+    </script>
+</body>
+</html>
